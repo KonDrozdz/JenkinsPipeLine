@@ -24,6 +24,7 @@ pipeline {
             sh "mvn heroku:deploy"
             }
             }
+            }
 
             post {
                 // If Maven was able to run the tests, even if some of the test
@@ -35,3 +36,4 @@ pipeline {
             }
         }
     }
+}
