@@ -11,17 +11,19 @@ pipeline {
             steps {
             sh "mvn clean compile"
             }
+            }
+
             stage('Test'){
             steps{
             sh "mvn test"
             }
-
-
             }
+
             stage('Deploy'){
             steps{
             sh "mvn heroku:deploy"
-            }}
+            }
+            }
 
             post {
                 // If Maven was able to run the tests, even if some of the test
